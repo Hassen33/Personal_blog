@@ -1,0 +1,18 @@
+<%- include('partials/header'); %>
+<h1> Home</h1>
+<p><%=homeStartingContentKey%></p>
+<ul class="posts">
+    <%postsKey.map((i)=>{%>
+        
+        <li>
+            <h1 class="post-title"> <%=i.postTitle%></h1>
+            <p class="post-content  " > <%=i.post.substring(0,100) + '...'%>
+            <a href="/posts/<%=i.postTitle%>">Read More</a>
+            </p>
+
+        </li>
+            
+     <%   }) %>
+    </li>
+</ul>
+<%- include('partials/footer'); %>
